@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTS CUSTOMER SERVICE</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5cba7; /* Beige-like background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body covers the entire screen height */
+        }
+
+        header {
+            background-color: #ffe4b5; /* Light beige */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* Space between logo, nav links, and auth links */
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            height: 40px; /* Adjust the size of your logo */
+            width: auto;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%; /* Ensures nav takes full width */
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center; /* Centers the nav links */
+            flex-grow: 1; /* This makes the nav-links take available space and push the auth-links to the right */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000; /* Adjust the text color */
+            font-size: 16px; /* Adjust font size */
+            margin-right: 20px; /* Space between links */
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 10px; /* Space between Sign In and Sign Up links */
+        }
+
+        .auth-links a {
+            text-decoration: none;
+            color: #333; /* Adjust color */
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .auth-links a:hover {
+            color: #555;
+        }
+
+        main {
+            padding: 20px;
+            flex-grow: 1; /* Allows the main content to grow and push the footer down */
+        }
+
+        /* Home Section */
+        .cover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffe4b5;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-size: 2.5em;
+        }
+
+        /* About and Categories Section */
+        .about-categories {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .about-content {
+            flex: 2; /* Takes 2/3 of the space */
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Center the image in the carousel */
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Ensures the container fills the available height */
+        }
+
+        .carousel img {
+            max-width: 100%;
+            max-height: 300px; /* Set a max height for better scaling */
+            border-radius: 10px;
+        }
+
+        /* Adjust the position of the "About Us" description text */
+        .description {
+            max-width: 500px; /* Keep the width limit */
+            margin: 0 20px; /* Adjust the margin to move it to the left */
+            text-align: justify; /* Optional: Justify the text */
+            line-height: 1.6; /* Improve readability */
+            padding: 10px; /* Optional: Add some padding for spacing */
+        }
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;  /* Aligns the content to the start (left) of the container */
+    align-items: center;          /* Keeps the image centered vertically */
+    padding: 20px;
+}
+
+
+
+        .categories-section {
+            flex: 2; /* Takes 1/3 of the space */
+            background-color: #ffe4b5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .categories-section h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .categories-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .category-box {
+            background-color: #ffd39b;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-box:hover {
+            background-color: #ffcc99;
+        }
+
+        /* Contact Section */
+        .contact {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #ffe4b5;
+            padding: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #ffe4b5;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image.png" alt="Logo"> <!-- Replace with your logo image source -->
+        </div>
+        <nav>
+            <!-- Wrapper for the nav links -->
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#call">Call</a>
+                <a href="#chat">Chat</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- Sign In/Up links -->
+            <div class="auth-links">
+                <a href="#signin">Sign In</a>
+                <a href="#signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="cover">
+            <div class="cover-text">
+                <h1>NTS CUSTOMER SERVICE</h1>
+            </div>
+        </section>
+
+        <section class="about-categories">
+            <!-- About Section -->
+            <div class="about-content">
+                <div class="description">
+                    <h2>About NTS Customer Service</h2>
+                    <p>In a competitive business world, good customer service is essential. Many companies have trouble 
+                        handling customer inquiries. NTS Customer Service was created by founders with relevant experience 
+                        to fill this gap. It's based on industry knowledge and a focus on helping businesses 
+                        through great customer service. The mission of  NTS Customer Service is to offer unbeatable customer 
+                        support that goes beyond what's expected, being a reliable partner for businesses to build good customer relationships. 
+                        The vision is to be the global standard in customer service, known for quality, and to let businesses focus on their main work 
+                        while NTS handles support. They'll adapt to market changes with new technologies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="pic.jpg" alt="Customer Service Image" class="about-image"> <!-- Replace with your image path -->
+            </div>
+
+            <!-- Categories Section -->
+            <aside class="categories-section">
+                <h2>Our Categories</h2>
+                <p>Exceptional solutions tailored to your needs.</p>
+                <div class="categories-container">
+                    <a href="categories.html?category=home-projects" class="category-box">Home Projects</a>
+                    <a href="categories.html?category=maintenance" class="category-box">Maintenance</a>
+                    <a href="categories.html?category=remodeling" class="category-box">Remodeling</a>
+                    <a href="categories.html?category=construction" class="category-box">Construction</a>
+                    <a href="categories.html?category=inspection" class="category-box">Inspection</a>
+                    <a href="categories.html?category=cleaning" class="category-box">Cleaning</a>
+                    <a href="categories.html?category=gardening" class="category-box">Gardening</a>
+                    <a href="categories.html?category=more-services" class="category-box">More Services</a>
+                </div>
+                
+            </aside>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>For more information, reach out to us at NTS@gmail.com or call us at (555) 123-4567.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NTS Customer Service</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
